@@ -4,7 +4,6 @@
  * 
  * Return: Always 0 (Success/correct)
  **/
-
 void print_alphabet(void)
 {
 char alphabet;
