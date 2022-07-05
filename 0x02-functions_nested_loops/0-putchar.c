@@ -4,19 +4,20 @@
 *main - Entry point
 *
 *Return: Should be 0 (Success/correct)
-*/
+**/
 
 int main(void)
 {
+	
+	char text[] = "_putchar";
+	int i;
 
-_putchar('_');
-_putchar('p');
-_putchar('u');
-_putchar('t');
-_putchar('c');
-_putchar('h');
-_putchar('a');
-_putchat('r');
+	for (i = 0; i < 8; i++)
+	{
+		_putchar(text[i]);
+	}
+
+
 _putchar('\n');
 
 return (0);
