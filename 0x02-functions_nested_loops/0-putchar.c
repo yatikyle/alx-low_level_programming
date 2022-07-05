@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * main - Entry point 
- *
- *Return: Should return nothing, Return void
- */
+*main - Entry point
+*
+*Return: Should be 0 (Success/correct)
+*/
 
-int main (void)
+int main(void)
 {
+
 _putchar('_');
 _putchar('p');
 _putchar('u');
