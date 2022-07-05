@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-*main - Entry point
-*
-*Return: Should be 0 (Success/correct)
-**/
+ * main - Entry point
+ *
+ * Return: Should be 0 (Success/correct)
+ */
 
 int main(void)
 {
@@ -18,7 +18,7 @@ int main(void)
 	}
 
 
-_putchar('\n');
+_putchar ('\n');
 
 return (0);
 }
