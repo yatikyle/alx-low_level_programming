@@ -15,14 +15,13 @@ void times_table(void)
 			_putchar(',');
 			_putchar(' ');
 
-			p= n + m;
+			p= n * m;
 
 			if (p <= 9)
 				_putchar(' ');
 			else
-				_putchar((p / 10) + '0');
-			
-			_putchar((p % 10) + '0');
+				_putchar((p / 10) + '0');	
+				_putchar((p % 10) + '0');
 		}
 		_putchar('\n');
 	}
