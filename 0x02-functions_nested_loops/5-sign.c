@@ -1,25 +1,25 @@
+#include "main.h"
 /**
- * print_sign - must return function to check sign of a number
- * @n: integer that will print
- * Return: 0 Awlways (Success)
+ * print_sign - Function that prints the sign of the number
+ * @n: The variable that will be printed in execution
+ *
+ * Return: 1 if number is greater than zero, 0 if number is = 0, -1 if the number is less than 0.
  */
-
 int print_sign(int n)
 {
-if (n > 0)
-{
-_putchar('+');
-return (1);
-}
-else if (n == 0)
-{
-_putchar ('0');
-return (0);
-}
-else
-{
-_putchar ('-');
-return (-1);
-}
-
+	if (n > 0)
+	{
+		_putchar('+');
+		return (1);
+	}
+	else if (n == 0)
+	{
+		_putchar('0');
+		return (0);
+	}
+	else
+	{
+		_putchar('-');
+		return (-1);
+	}
 }
