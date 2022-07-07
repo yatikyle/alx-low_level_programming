@@ -1,6 +1,8 @@
 #include "main.h"
 /**
  * times_table - Prints the whole 9x table, starting with 0
+ *
+ * Return: Always 0 (Success)
  */
 void times_table(void)
 {
@@ -27,4 +29,3 @@ void times_table(void)
 		_putchar('\n');
 	}
 }
-
