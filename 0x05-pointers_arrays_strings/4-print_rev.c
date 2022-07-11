@@ -3,7 +3,7 @@
  * print_rev - prints a string in reverse order
  *@s: A pointer to an int that will be changed 
  *
- *Return: void which means our answer is correct
+ *Return: void which means our answer is correct.
  */
 
 void print_rev(char *s)
@@ -21,5 +21,5 @@ void print_rev(char *s)
 		_putchar (s[i]);
 	}
 
-	putchar ('\n');
+	_putchar ('\n');
 }
