@@ -3,8 +3,8 @@
 
 /**
  * print_array - prints n elements of an array of integers
- * @str: The string to be encoded
- *
+ * @a: A pointer to an int that will be updated
+ * @n: return value n
  * Return: A pointer to the encoded string
  */
 
