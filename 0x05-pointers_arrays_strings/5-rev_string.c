@@ -14,7 +14,7 @@ void rev_string(char *s)
 
 	for (i = 0; s[i]; i++)
 	{
-		legth++;
+		length++;
 	}
 
 	count = length;
@@ -31,7 +31,7 @@ void rev_string(char *s)
 	{
 		c = *end_c;
 		*end_c = *start_c;
-		start_c = c;
+		start_c = s;
 
 		start_c++;
 		end_c--;
