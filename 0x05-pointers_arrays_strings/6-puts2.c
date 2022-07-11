@@ -5,29 +5,14 @@
  *
  * Return: A pointer to be changed to a string
  */
-char *cap_string(char *str)
+void puts2(char *str)
 {
-	int index = 0;
+	int a;
 
-	while (str[index])
+	for (a = 0; str[a] != '\0'; a++)
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-
-		if(str[index - 1] == ' ' ||
-		str[index - 1] == '\t' ||
-		str[index - 1] == '\n' ||
-	       	str[index - 1] == ',' ||
-		str[index - 1] == '.' ||
-		str[index - 1] == '!' ||
-		str[index - 1] == '?' ||
-		str[index - 1] == '"' ||
-		str[index - 1] == '(' ||
-		str[index - 1] == ')' ||
-		str[index - 1] == '{' ||
-		str[index - 1] == '}' ||
-		index == 0)
-			str[index] -= 32;
-
-	index++;
-	}	
+		if (a % 2 == 0)
+			_putchar (str[a]);
+	}
+	_putchar ('\n');
+}
