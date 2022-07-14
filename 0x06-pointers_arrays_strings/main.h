@@ -4,6 +4,9 @@
  * Desc: Header file containing protypes for all funnctions
  * 		used in the 0x06-pointers_arrays_strings directory.
  */
+#ifndef _main_H_
+#define _main_H
+
 
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
