@@ -1,0 +1,1 @@
+Readme file 0x07_pointers_arrays_strings
