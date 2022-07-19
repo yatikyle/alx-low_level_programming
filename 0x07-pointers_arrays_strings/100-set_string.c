@@ -3,10 +3,8 @@
 
 /**
  * set_string - sets the value of a pointer to a char
- * @s: content is to be copied
- * @to: strin
- *
- * Return: void.
+ * @s: The string
+ * @to: The char.
  */
 void set_string(char **s, char *to)
 {
