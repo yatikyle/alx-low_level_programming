@@ -1,57 +1,48 @@
-#include "main"
-
 /**
- * f_strlen - Returns the length of a string.
- * @s: The string to be measured.
- *
- * Return: length of the string.
+ * _strlen_recursion - dins the length of a string
+ * @s: pointer to string.
+ * Return: length of string.
  */
-int f_strlen(char *s)
+
+int _strlen_recursion(char *s)
 {
-	int len = 0;
-
-	if (*(s + len))
-	{
-		len++;
-		len += f_strlen(s + len);
-	}
-
-	return (len);
+	if (*s == '\0')
+		return (0);
+	return (_strlen_recursion(s + 1) + 1);
 }
 
 /**
- * c_palindrome - Checks if a string is a palindrome.
- * @s: The string to be checked.
- * @len: The length of s.
- * @index: The index of the string to be checked.
- *
- * Return: if the string is a palindrome -1.
- * If the string is not a palindrome 0.
+ * palindrome_rsv - checks if two chars of a string are equal
+ * @s: string to be checked.
+ * @i: first index.
+ * @j: last index.
+ * Return: 1 is equal, otherwise 0.
  */
-int c_palindrome(char *s, int len, int index)
+
+int palindrome_rsv(char *s, int i, int j)
 {
-	if ([index] == s[len / 2])
+	if (i == j)
 		return (1);
-
-	if (s[index] == s[len - index - 1])
-		return (c_palindrome(s, len, indeex + 1));
-
-	return (0);
+	if (i == j - 1)
+		return (s[i] == s[j]);
+	if (s[i] != s[j])
+		return (0);
+	return (palindrome_rsv(s, i + 1, j - 1));
 }
 
 /**
- * is_palindrome - String is palindrome?
- * @s: The string to be checked.
+ * is_palindrome - checks if a string is a palindrome
+ * @s: pointer to a string
  *
- * Return: String is palindrome -1, otherwise 0.
+ * Return: 1 if string is a palindrome, otherwise 0.
  */
-int is_palindrome(char *s)
+
+it is_palindrome(char *s)
 {
-	int index = 0;
-	int len = f_strlen(s);
+	int len;
 
-	if (!(*s))
-		return (1);
-
-	return (check_palindrome(s, len, index));
+	len = _strlen_recursion(s);
+	if (len == 0 || *s != s[len - 1])
+		return (0);
+	return (palindromw_rsv(s, 0, len - 1));
 }
