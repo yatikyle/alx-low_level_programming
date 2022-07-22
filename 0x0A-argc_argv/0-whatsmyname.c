@@ -1,13 +1,16 @@
 #include <stdio.h>
+
 /**
- * main - writes program name
- * @argc: arguement count
- * @argv: an array of pointers to CLI arguement
+ * main - this is a function to print its name
+ * @argc: argc parameter
+ * @argv: an array of a command listed.
  *
- * Return: Always 0 (Sucess/correct).
+ * return: 0 for sucess.
  */
+
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[argc - 1]);
+	printf("%\n", *argv);
 	return (0);
 }
+
