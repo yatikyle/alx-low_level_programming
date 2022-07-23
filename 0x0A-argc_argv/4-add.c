@@ -1,44 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- * isInteger - checks is s an integer
- * @s: string to check
- * Return: 0 or 1.
+ * main -Prints the addition of postive numbers.
+ * @argc: The number of arguements passed to the program.
+ * @argv: An array of pointers to the arguements.
+ * Return: If one of the numbers contains symbols that are non-digits 1.
  */
-int isInteger(const char *s)
-{
-	int i = 0;
 
-	while (s[i] != '\0')
+int main(int argc, char *argv[])
+{
+	int num, digit, sum = 0;
+
+	for (num = 1; num < argc; num++)
 	{
-		if (s[i] < '0' || s[i] > '9')
+		for (digit = 0; argv[num][digit]; digit++)
+		{
+		if (argv[num][digit] < '0' || argv[num][digit] > '9')
+		{
+			printf("Error\n");
 			return (1);
-		i++;
+		}
+		}
+
+		sum += atoi(argv[num]);
 	}
-	return (0);
-}
 
-/**
- * main -adds postive numbers
- * @argc: int
- * @argv: list
- * Return: 0
- */
-int main(int argc, char const *argv[])
-{
-	int sum = 0;
+	printf("%d\n", sum);
 
-	while (--argc)
-
-	{
-		if (isInteger(argv[argc]))
-			{
-				printf("Error\n");
-				return (1);
-			}
-			sum += atoi(argv[argc]);
-	}
-	printf("%i\n", sum);
 	return (0);
 }
