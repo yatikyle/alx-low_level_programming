@@ -1,57 +1,53 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * isInteger - checks if s is an integer
- * @s: string to check
- * Return: 0 or 1.
+ * main - Prints the minimum number of coins
+ * @argc: The number of arguements supplied tto the program.
+ * @argv: An array of pointers to the arguements.
+ *
+ * Return: If the number of arguements is not exactly 1.
  */
-
-int isInteger(const char *s)
+int main(int argc, char *argv[])
 {
-	int i = 0;
+	int cents, coins = 0;
 
-	while (s[i] != '\0')
+	if (argc != 2)
 	{
-		if (s[i] < '\0' || s[i] > '9')
-			return (0);
-		i++;
+		printf("Error\n");
+		return (1);
 	}
-	return (1);
-}
 
-/**
- * main -adds postive numbers
- * @argc: int
- * @argv: list
- * Return: 0.
- */
+	cents = atoi(arv[1]);
 
-int main(int argc, char const *argv[])
-{
-	int i = 0, coinUsed = 0, coin = 0;
-	int coins[] = {25, 10, 5, 2, 1};
-
-if (arg != 2)
-{
-	printf("Error\n");
-	return (1);
-}
-if (isInteger(arv[1]))
+	while (cents > 0)
+	{
+		coins++;
+		if ((cents - 25) >= 0)
 		{
-			i = atoi(argv[1]);
-			while (i > 0 && coin <= 4)
-			{
-				if  (i >= coins[coin])
-				{
-					i -= coins[coin];
-					coinUsed++;
-				}
-				else
-				{
-					coin++;
-				}
-			}
+			cents -= 25;
+			continue;
 		}
-printf("%i\n", coinUsed);
-return (0);
+		if ((cents - 10) >= 0)
+		{
+			cents -= 10;
+			continue;
+		}
+		if ((cents - 5) >= 0)
+		{
+			cents -= 5;
+			continue;
+		}
+		if ((cents - 2) >= 0)
+		{
+			cents -= 2;
+			continue;
+		}
+
+		cents--;
+	}
+
+	printf("%d\n", coins);
+
+	return (0);
 }
